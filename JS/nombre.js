@@ -1,18 +1,27 @@
 let nombre = prompt("¿Cómo te llamás?");
 let camino = prompt("A " + nombre +" la llaman: Aceptar o Rechazar ");
 
-if (camino == "Aceptar") {
-    let accion = prompt("Le ofrecen ir a una cabaña en la montaña ¿ ir o no ir?")
-    if (accion == "no ir") 
-        alert (nombre + " te salvaste")
-}
-    if (accion == "ir"){
-        let muerte = prompt(nombre + " llega al lugar y hay olor a cadáver: entrar o no?" )
-            if(muerte == "entrar"){
-                alert("A " + nombre + " la mato un asesino dentro de la cabaña") }
-                
+if (camino === "Aceptar") {
+    let accion = prompt("te dicen de ir a una cabaña en la montaña sola por unos dias: ¿ ir o no ir?");
+        if (accion === "ir"){
+            let final = prompt(nombre + " ya se encuentra en la cabaña, pero hay olor a cadaver:¿Entrar o salir corriendo");
+            if (final === "Entrar"){
+                alert("Detras de la puerta se encontraba un asesino, te mata. " + nombre + " has perdido")
+            } else{
+                let correr = prompt("Sales corriendo a un lugar que parece seguro, intentas pedri ayuda? si o no?");
+                if (correr === "si"){
+                    alert(nombre + " no hay señal, los ruidos de la cabaña eran un asesino te encuentra y muertes, FINAL.");
+                } else (correr === "no") 
+                    alert(nombre + " Mueres" );
+                }
+            } else(accion === "no ir")
+                alert(nombre + " respondes amablemnte que no puedes ir, te salvaste!!");
+        } 
+else if(camino == "Rechazar"){
+    alert(nombre + " te has salvado");
 }
 
-else if (camino == "Rechazar"){
-    alert(nombre + " te has salvado")
-}
+
+
+
+
